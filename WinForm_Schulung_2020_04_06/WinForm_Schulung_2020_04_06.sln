@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul03_ErrorProvider", "Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_UserControls", "Modul04_UserControls\Modul04_UserControls.csproj", "{CE78AA5F-C414-4B85-878F-7A93A77B1549}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul05_DataGridView", "Modul05_DataGridView\Modul05_DataGridView.csproj", "{B690687E-C3CD-4976-8BC5-7AF95D3343F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{CE78AA5F-C414-4B85-878F-7A93A77B1549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE78AA5F-C414-4B85-878F-7A93A77B1549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE78AA5F-C414-4B85-878F-7A93A77B1549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B690687E-C3CD-4976-8BC5-7AF95D3343F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B690687E-C3CD-4976-8BC5-7AF95D3343F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B690687E-C3CD-4976-8BC5-7AF95D3343F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B690687E-C3CD-4976-8BC5-7AF95D3343F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
