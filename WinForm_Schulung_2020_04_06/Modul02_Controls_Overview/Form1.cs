@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -131,7 +132,74 @@ namespace Modul02_Controls_Overview
 
                 MessageBox.Show(selectedPerson.Id.ToString() + " | " + selectedPerson.Vorname + " " + selectedPerson.Nachname);
             }
-           
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            PopulateTreeView();
+        }
+
+        private void PopulateTreeView()
+        {
+            TreeNode rootNode;
+
+            DirectoryInfo info = new DirectoryInfo(@"../..");
+            if (info.Exists)
+            {
+                rootNode = new TreeNode(info.Name);
+                rootNode.Tag = info;
+                GetDirectories(info.GetDirectories(), rootNode);
+                treeView1.Nodes.Add(rootNode);
+            }
+        }
+
+        private void GetDirectories(DirectoryInfo[] subDirs,
+            TreeNode nodeToAddTo)
+        {
+            TreeNode aNode;
+            DirectoryInfo[] subSubDirs;
+            foreach (DirectoryInfo subDir in subDirs)
+            {
+                aNode = new TreeNode(subDir.Name, 0, 0);
+                aNode.Tag = subDir;
+                aNode.ImageKey = "folder";
+                subSubDirs = subDir.GetDirectories();
+                if (subSubDirs.Length != 0)
+                {
+                    GetDirectories(subSubDirs, aNode);
+                }
+                nodeToAddTo.Nodes.Add(aNode);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            #region Link - URL Aufruf auf Codeprojekt 
+            LinkLabel.Link link = new LinkLabel.Link();
+            link.LinkData = "https://www.codeproject.com/Articles/23115/Working-with-TreeView-Controls-2";
+            linkLabel1.Links.Add(link);
+            #endregion
+
+            #region 
+            //Autofilter - Vorschlagsliste wird aufbereitet.
+            AutoCompleteStringCollection colValues = new AutoCompleteStringCollection();
+            colValues.AddRange(new string[] { "Berlin", "Hamburg", "Bremen", "Stuttgart", "Saarbrücken", "Frankfurt a.M." });
+
+            textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            
+            // Liste anhängen ...
+            textBox1.AutoCompleteCustomSource = colValues;
+            #endregion
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabel1.LinkVisited = true;
+
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start("https://www.codeproject.com/Articles/23115/Working-with-TreeView-Controls-2");
         }
     }
 }
