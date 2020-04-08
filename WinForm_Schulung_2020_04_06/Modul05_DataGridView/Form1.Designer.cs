@@ -31,7 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.beispieleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einfachesGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bindingGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainContent = new System.Windows.Forms.Panel();
+            this.dataGridViewMitEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,32 +45,48 @@
             this.beispieleToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(979, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(979, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // beispieleToolStripMenuItem
             // 
             this.beispieleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.einfachesGridToolStripMenuItem});
+            this.einfachesGridToolStripMenuItem,
+            this.bindingGridToolStripMenuItem,
+            this.dataGridViewMitEFToolStripMenuItem});
             this.beispieleToolStripMenuItem.Name = "beispieleToolStripMenuItem";
-            this.beispieleToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
+            this.beispieleToolStripMenuItem.Size = new System.Drawing.Size(130, 38);
             this.beispieleToolStripMenuItem.Text = "Beispiele";
             // 
             // einfachesGridToolStripMenuItem
             // 
             this.einfachesGridToolStripMenuItem.Name = "einfachesGridToolStripMenuItem";
-            this.einfachesGridToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.einfachesGridToolStripMenuItem.Size = new System.Drawing.Size(366, 44);
             this.einfachesGridToolStripMenuItem.Text = "Einfaches Grid";
             this.einfachesGridToolStripMenuItem.Click += new System.EventHandler(this.einfachesGridToolStripMenuItem_Click);
+            // 
+            // bindingGridToolStripMenuItem
+            // 
+            this.bindingGridToolStripMenuItem.Name = "bindingGridToolStripMenuItem";
+            this.bindingGridToolStripMenuItem.Size = new System.Drawing.Size(366, 44);
+            this.bindingGridToolStripMenuItem.Text = "Binding Grid";
+            this.bindingGridToolStripMenuItem.Click += new System.EventHandler(this.bindingGridToolStripMenuItem_Click);
             // 
             // mainContent
             // 
             this.mainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContent.Location = new System.Drawing.Point(0, 40);
+            this.mainContent.Location = new System.Drawing.Point(0, 42);
             this.mainContent.Name = "mainContent";
-            this.mainContent.Size = new System.Drawing.Size(979, 591);
+            this.mainContent.Size = new System.Drawing.Size(979, 589);
             this.mainContent.TabIndex = 1;
+            // 
+            // dataGridViewMitEFToolStripMenuItem
+            // 
+            this.dataGridViewMitEFToolStripMenuItem.Name = "dataGridViewMitEFToolStripMenuItem";
+            this.dataGridViewMitEFToolStripMenuItem.Size = new System.Drawing.Size(366, 44);
+            this.dataGridViewMitEFToolStripMenuItem.Text = "DataGridView mit EF";
+            this.dataGridViewMitEFToolStripMenuItem.Click += new System.EventHandler(this.dataGridViewMitEFToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -93,6 +111,8 @@
         private System.Windows.Forms.ToolStripMenuItem beispieleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem einfachesGridToolStripMenuItem;
         private System.Windows.Forms.Panel mainContent;
+        private System.Windows.Forms.ToolStripMenuItem bindingGridToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataGridViewMitEFToolStripMenuItem;
     }
 }
 

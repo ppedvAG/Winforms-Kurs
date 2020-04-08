@@ -1,0 +1,21 @@
+
+
+DataGridView:
+
+MSDN Seite:
+- https://docs.microsoft.com/de-de/dotnet/api/system.windows.forms.datagridview?view=netframework-4.8
+
+Übersicht zu Tutorial Artikeln von Microsoft zum Thema DataGridView
+https://docs.microsoft.com/de-de/dotnet/framework/winforms/controls/datagridview-control-windows-forms
+
+Update / Create / Delete einer DataGridView 
+https://www.c-sharpcorner.com/UploadFile/1e050f/insert-update-and-delete-record-in-datagridview-C-Sharp/
+
+
+Kommazahlen Typen
+    double d;
+    float f = 434f;
+    decimal d = 2000m;
+
+    //1.000.000
+    decimal money = 2_000_000m;

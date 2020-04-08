@@ -29,5 +29,29 @@ namespace Modul05_DataGridView
 
             this.mainContent.Controls.Add(simpleDataGridView);
         }
+
+        private void bindingGridToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Clear wird aufgerufen, weil eventuell ein anderes Control gerade angezeigt wird
+            this.mainContent.Controls.Clear();
+
+            BindingDataGrid bindingDataGrid = new BindingDataGrid();
+            bindingDataGrid.Dock = DockStyle.Fill;
+
+
+            this.mainContent.Controls.Add(bindingDataGrid);
+        }
+
+        private void dataGridViewMitEFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Clear wird aufgerufen, weil eventuell ein anderes Control gerade angezeigt wird
+            this.mainContent.Controls.Clear();
+
+            DataGridViewWithEF dataGridViewWithEF = new DataGridViewWithEF();
+            dataGridViewWithEF.Dock = DockStyle.Fill;
+
+
+            this.mainContent.Controls.Add(dataGridViewWithEF);
+        }
     }
 }

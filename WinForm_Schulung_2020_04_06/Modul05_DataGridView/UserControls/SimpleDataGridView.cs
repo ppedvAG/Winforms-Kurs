@@ -40,6 +40,10 @@ namespace Modul05_DataGridView.UserControls
                     
                     dataGridView1.DataSource = resultTable;
 
+                    //Exportiermöglichkeit
+                    resultTable.WriteXml("file.xml");
+                    
+
 
                     //Colums einfärben
                     dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
@@ -100,9 +104,46 @@ namespace Modul05_DataGridView.UserControls
             // Ignore clicks that are not on button cells. 
             if (e.RowIndex < 0 || e.ColumnIndex !=
                 dataGridView1.Columns["CreateReport"].Index) return;
-            
-            // Retrieve the task ID.
-            int Id = (Int32)dataGridView1["ProductID", e.RowIndex].Value;
+
+            int Id;
+            if (int.TryParse(dataGridView1["ProductID", e.RowIndex].Value.ToString(), out Id))
+            {
+                // Id ist in diesem Block gesetzt 
+                MessageBox.Show(Id.ToString());
+            }
+        }
+
+
+        #region Validierung in einem DataViewGrid
+        private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            string headerText = dataGridView1.Columns[e.ColumnIndex].HeaderText;
+
+            if (headerText == "Name")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
+                {
+                    dataGridView1.Rows[e.RowIndex].ErrorText = "Product Name not be empty";
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Rows[e.RowIndex].ErrorText = string.Empty;
+        }
+        #endregion
+
+        /// <summary>
+        /// Ereignis wird aufgerufen, wenn ich im DataGridView einen neuen Datensatz direkt im Grid anlegen möchte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridView1_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            e.Row.Cells["Name"].Value = "abc";
+            e.Row.Cells["ProductNumber"].Value = "ser_12345";
         }
     }
 }
