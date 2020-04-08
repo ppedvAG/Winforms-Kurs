@@ -1,0 +1,5 @@
+C:\Meine Kurse\2020_04_06_WinForms\WinForm_Schulung_2020_04_06\TestdatenLibrary\bin\Debug\TestdatenLibrary.dll
+C:\Meine Kurse\2020_04_06_WinForms\WinForm_Schulung_2020_04_06\TestdatenLibrary\bin\Debug\TestdatenLibrary.pdb
+C:\Meine Kurse\2020_04_06_WinForms\WinForm_Schulung_2020_04_06\TestdatenLibrary\obj\Debug\TestdatenLibrary.csproj.CoreCompileInputs.cache
+C:\Meine Kurse\2020_04_06_WinForms\WinForm_Schulung_2020_04_06\TestdatenLibrary\obj\Debug\TestdatenLibrary.dll
+C:\Meine Kurse\2020_04_06_WinForms\WinForm_Schulung_2020_04_06\TestdatenLibrary\obj\Debug\TestdatenLibrary.pdb
